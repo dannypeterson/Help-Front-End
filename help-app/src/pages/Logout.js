@@ -1,5 +1,11 @@
+import Nav from '../components/Nav'
+
 const Logout = () => {
-  return <div>Logout Page</div>
+  return (
+    <div className="main">
+      <Nav />
+    </div>
+  )
 }
 
 export default Logout

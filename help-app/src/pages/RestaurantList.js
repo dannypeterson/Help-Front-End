@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../services/api'
+import Nav from '../components/Nav'
 
 const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([])
@@ -16,7 +17,8 @@ const RestaurantList = () => {
   }, [])
 
   return (
-    <div>
+    <div className="main">
+      <Nav />
       {restaurants.map((restaurant) => (
         <div key={restaurant.id}>
           <img src={restaurant.image} alt={restaurant.name} />

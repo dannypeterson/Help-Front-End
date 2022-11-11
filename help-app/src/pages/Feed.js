@@ -1,4 +1,10 @@
+import Nav from '../components/Nav'
+
 const Feed = () => {
-  return <div>Feed will go here</div>
+  return (
+    <div className="main">
+      <Nav />
+    </div>
+  )
 }
 export default Feed

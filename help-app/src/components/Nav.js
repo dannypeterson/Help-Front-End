@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-const Nav = ({ header }) => {
+const Nav = () => {
   let navigate = useNavigate()
 
   return (
@@ -14,7 +14,7 @@ const Nav = ({ header }) => {
           </li>
 
           <li>
-            <Link to="/restaurantlist">Restaurants</Link>
+            <Link to="/restaurants">Restaurants</Link>
           </li>
 
           <li>
