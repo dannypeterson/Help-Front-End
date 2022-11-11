@@ -1,4 +1,4 @@
-const Review = () => {
+const Logout = () => {
   return  <div>
     {/* <Link></Link>
     <Link></Link>
@@ -7,4 +7,4 @@ const Review = () => {
     </div>
 }
 
-export default Review
+export default Logout
