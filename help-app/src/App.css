@@ -59,3 +59,15 @@ a:link, a:visited {
 .nav_links li p:hover {
   color: #0088a9;
 }
+
+.signupform {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 35px;
+  padding: 5px;
+  
+
+}

@@ -1,11 +1,7 @@
-import { useNavigate, Route, Routes, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const LandingPage = () => {
   const navigate = useNavigate()
-
-  const redirectToSignUp = () => {
-    navigate('/signup')
-  }
 
   return (
     <div>
@@ -16,7 +12,7 @@ const LandingPage = () => {
       </h2>
       <h3>"It's almost like Yelp and Facebook had a baby!" - Mac</h3>
       <button>Login</button>
-      <button onClick={redirectToSignUp}>Sign up</button>
+      <button onClick={() => navigate('/signup')}>Sign up</button>
     </div>
   )
 }

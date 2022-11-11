@@ -13,16 +13,13 @@ import { useState } from 'react'
 function App() {
   return (
     <div>
-      <header>
-        <Nav />
-      </header>
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/restaurantlist" element={<RestaurantList />} />
-          <Route path="/restaurant" element={<Restaurant />} />
+          <Route path="/restaurants" element={<Restaurant />} />
           <Route path="/createreview" element={<CreateReview />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>

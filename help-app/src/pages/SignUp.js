@@ -22,7 +22,7 @@ const SignUp = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="signupform" onSubmit={handleSubmit}>
       <label htmlFor="username">Username:</label>
       <input
         id="username"
@@ -31,6 +31,7 @@ const SignUp = () => {
         onChange={handleChange}
         value={signUpState.username}
       />
+      <br />
       <label htmlFor="username">Email:</label>
       <input
         id="email"
@@ -39,6 +40,7 @@ const SignUp = () => {
         onChange={handleChange}
         value={signUpState.email}
       />
+      <br />
       <label htmlFor="username">Password:</label>
       <input
         id="password"
@@ -47,6 +49,7 @@ const SignUp = () => {
         onChange={handleChange}
         value={signUpState.password}
       />
+      <br />
 
       <label htmlFor="username">Confirm password:</label>
       <input
@@ -56,6 +59,7 @@ const SignUp = () => {
         onChange={handleChange}
         value={signUpState.confirmPassword}
       />
+      <br />
       <button type="submit">Sign up!</button>
     </form>
   )

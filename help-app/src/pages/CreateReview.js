@@ -16,14 +16,14 @@ const CreateReview = () => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault()
-  //   const completedReview = {
-  //     ...formState
-  //   }
-  //   let res = await axios.post(`${BASE_URL}/feed`, completedReview)
-  //   setFormState(initialState)
-  // }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const completedReview = {
+      ...formState
+    }
+    let res = await axios.post(`${BASE_URL}/feed`, completedReview)
+    setFormState(initialState)
+  }
 
   return (
     <form className="form" onSubmit={handleSubmit}>
