@@ -21,7 +21,7 @@ const RestaurantList = () => {
       <Nav />
       {restaurants.map((restaurant) => (
         <div key={restaurant.id}>
-          <img src={restaurant.image} alt={restaurant.name} />
+          <img src={restaurant.img} alt={restaurant.name} />
           <h2>{restaurant.name}</h2>
           <h3>{restaurant.address}</h3>
           <h3>{restaurant.category}</h3>
