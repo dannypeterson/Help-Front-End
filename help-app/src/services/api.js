@@ -2,9 +2,9 @@ import axios from 'axios'
 
 export const BASE_URL = 'http://localhost:3001'
 
-const Client = axios.create({ baseURL: BASE_URL })
+const client = axios.create({ baseURL: BASE_URL })
 
-Client.interceptors.request.use(
+client.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token')
     if (token) {
@@ -15,4 +15,4 @@ Client.interceptors.request.use(
   (error) => Promise.reject(error)
 )
 
-export default Client
+export default client

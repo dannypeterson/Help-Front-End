@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = ({ header }) => {
   let navigate = useNavigate()
 
   return (
@@ -10,8 +10,21 @@ const Nav = () => {
       <nav>
         <ul className="nav_links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/feed">Home</Link>
           </li>
+
+          <li>
+            <Link to="/restaurantlist">Restaurants</Link>
+          </li>
+
+          <li>
+            <Link to="/createreview">Create Review</Link>
+          </li>
+
+          <li>
+            <Link to="/logout">Logout</Link>
+          </li>
+
           <li>
             <p onClick={() => navigate(-1)}>Back</p>
           </li>

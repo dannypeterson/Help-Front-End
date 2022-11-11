@@ -23,8 +23,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10%;
-  background-color: #24252A;
+  padding: 10px 10%;
+  background-color: rgb(255, 208, 0);
 }
 
 a:link, a:visited {

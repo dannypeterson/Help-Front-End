@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp'
 import RestaurantList from './pages/RestaurantList'
 import Restaurant from './components/Restaurant'
 import Logout from './pages/Logout'
+import { useState } from 'react'
 
 function App() {
   return (
