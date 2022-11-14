@@ -39,7 +39,7 @@ function App() {
           <Route path="/feed" element={<Feed user={user} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/restaurants" element={<RestaurantList />} />
-          <Route path="/createreview" element={<CreateReview />} />
+          <Route path="/createreview" element={<CreateReview user={user} />} />
           <Route
             path="/logout"
             element={<Logout handleLogOut={handleLogOut} setUser={setUser} />}

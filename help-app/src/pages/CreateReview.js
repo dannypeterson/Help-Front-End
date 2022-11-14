@@ -2,8 +2,11 @@ import { useState } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../services/api'
 import Nav from '../components/Nav'
+import { useNavigate } from 'react-router-dom'
 
-const CreateReview = () => {
+const CreateReview = ({ user }) => {
+  let navigate = useNavigate()
+
   const initialState = {
     dish: '',
     description: '',
@@ -21,11 +24,12 @@ const CreateReview = () => {
     const completedReview = {
       ...formState
     }
-    let res = await axios.post(`${BASE_URL}/feed`, completedReview)
+    let res = await axios.post(`${BASE_URL}/review/create`, completedReview)
     setFormState(initialState)
+    navigate('/feed')
   }
 
-  return (
+  return user ? (
     <div className="main">
       <Nav />
       <form className="form" onSubmit={handleSubmit}>
@@ -40,13 +44,16 @@ const CreateReview = () => {
         <textarea
           onChange={handleChange}
           value={formState.description}
+          id="description"
+          cols="30"
+          rows="10"
         ></textarea>
         <label htmlFor="rating">Rating:</label>
         <input
           onChange={handleChange}
           type="number"
-          id="title"
-          value={formState.title}
+          id="rating"
+          value={formState.rating}
         />
         <label htmlFor="img">Post Your Image</label>
         <input
@@ -58,6 +65,8 @@ const CreateReview = () => {
         <button type="submit">Post My Review!</button>
       </form>
     </div>
+  ) : (
+    <div>Sign In</div>
   )
 }
 export default CreateReview
