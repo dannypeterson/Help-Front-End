@@ -7,7 +7,7 @@ const Feed = () => {
   const [reviews, setReviews] = useState()
 
   const getReviews = async () => {
-    const res = await axios.get(`${BASE_URL}/reviews`)
+    const res = await axios.get(`${BASE_URL}/review`)
     console.log(res)
     setReviews(res.data)
   }

@@ -1,6 +1,9 @@
-import React, { useState, useNavigate } from 'react'
+import React, { useState } from 'react'
+import { SignUpUser } from '../services/Auth'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
+  const navigate = useNavigate()
   const initialState = {
     username: '',
     email: '',
@@ -13,12 +16,17 @@ const SignUp = () => {
     setSignUpState({ ...signUpState, [e.target.id]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // do something with the data in the component state
+    await SignUpUser({
+      username: signUpState.username,
+      email: signUpState.email,
+      password: signUpState.password
+    })
     console.log(signUpState)
-    // clear the form
+
     setSignUpState(initialState)
+    navigate('/')
   }
 
   return (

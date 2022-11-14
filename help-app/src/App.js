@@ -9,8 +9,9 @@ import RestaurantList from './pages/RestaurantList'
 import Restaurant from './components/Restaurant'
 import Logout from './pages/Logout'
 import { useState } from 'react'
-
 function App() {
+  const [user, setUser] = useState(null)
+
   return (
     <div>
       <main>
