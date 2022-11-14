@@ -2,9 +2,8 @@ import client from './api'
 
 export const SignInUser = async (data) => {
   try {
-    const res = await client.post('/auth/login', data)
+    const res = await client.post('/user/login', data)
     localStorage.setItem('token', res.data.token)
-    // Set the current signed in users token to localStorage
     return res.data.user
   } catch (error) {
     throw error
