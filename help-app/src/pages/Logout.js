@@ -1,12 +1,15 @@
-import Nav from '../components/Nav'
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const Logout = () => {
-  return (
-    <div className="main">
-      <Nav />
-      <h1>Logout</h1>
-    </div>
-  )
+const Logout = ({ handleLogOut }) => {
+  const navigate = useNavigate()
+  useEffect(() => {
+    handleLogOut()
+    alert('Successfully logged out!')
+    navigate('/')
+  }, [])
+
+  return <div>Logged Out</div>
 }
 
 export default Logout

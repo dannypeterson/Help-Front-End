@@ -10,7 +10,14 @@ const SignUp = () => {
     password: '',
     confirmPassword: ''
   }
+
+  // const resetPassword = {
+  //   password: '',
+  //   confirmPassword: ''
+  // }
+
   const [signUpState, setSignUpState] = useState(initialState)
+  //const [passwordState, setPasswordState] = useState(resetPassword)
 
   const handleChange = (e) => {
     setSignUpState({ ...signUpState, [e.target.id]: e.target.value })
@@ -18,15 +25,21 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await SignUpUser({
-      username: signUpState.username,
-      email: signUpState.email,
-      password: signUpState.password
-    })
-    console.log(signUpState)
+    if (signUpState.password !== signUpState.confirmPassword) {
+      alert('Passwords must match!')
+      setSignUpState(initialState)
+      return
+    } else {
+      await SignUpUser({
+        username: signUpState.username,
+        email: signUpState.email,
+        password: signUpState.password
+      })
+      console.log(signUpState)
 
-    setSignUpState(initialState)
-    navigate('/')
+      setSignUpState(initialState)
+      navigate('/')
+    }
   }
 
   return (
