@@ -17,7 +17,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage setUser={setUser} />} />
-          <Route path="/feed" element={<Feed />} />
+          <Route path="/feed" element={<Feed user={user} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/restaurants" element={<RestaurantList />} />
           <Route path="/createreview" element={<CreateReview />} />

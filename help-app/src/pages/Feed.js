@@ -2,8 +2,10 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Nav from '../components/Nav'
 import { BASE_URL } from '../services/api'
+import { useNavigate } from 'react-router-dom'
 
-const Feed = () => {
+const Feed = ({ user }) => {
+  const navigate = useNavigate()
   const [reviews, setReviews] = useState()
 
   const getReviews = async () => {
@@ -16,7 +18,7 @@ const Feed = () => {
     getReviews()
   }, [])
 
-  return (
+  return user ? (
     <div className="main">
       <Nav />
       <div className="reviews">
@@ -31,6 +33,11 @@ const Feed = () => {
           </div>
         ))}
       </div>
+    </div>
+  ) : (
+    <div className="protected">
+      <h3>Oops! You must be signed in to do that!</h3>
+      <button onClick={() => navigate('/')}>Sign In</button>
     </div>
   )
 }
