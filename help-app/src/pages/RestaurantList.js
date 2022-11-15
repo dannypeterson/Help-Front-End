@@ -2,12 +2,13 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../services/api'
 import Nav from '../components/Nav'
+import Client from '../services/api'
 
 const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([])
 
   const getRestaurants = async () => {
-    const res = await axios.get(`${BASE_URL}/restaurants`)
+    const res = await Client.get(`${BASE_URL}/restaurants`)
     console.log(res)
     setRestaurants(res.data)
   }

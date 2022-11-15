@@ -3,6 +3,7 @@ import axios from 'axios'
 import { BASE_URL } from '../services/api'
 import Nav from '../components/Nav'
 import { useNavigate } from 'react-router-dom'
+import Client from '../services/api'
 
 const CreateReview = ({ user }) => {
   let navigate = useNavigate()
@@ -24,7 +25,7 @@ const CreateReview = ({ user }) => {
     const completedReview = {
       ...formState
     }
-    let res = await axios.post(`${BASE_URL}/review/create`, completedReview)
+    let res = await Client.post(`${BASE_URL}/review/create`, completedReview)
     setFormState(initialState)
     navigate('/feed')
   }

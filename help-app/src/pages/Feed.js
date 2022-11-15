@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react'
 import Nav from '../components/Nav'
 import { BASE_URL } from '../services/api'
 import { useNavigate } from 'react-router-dom'
+import Client from '../services/api'
 
 const Feed = ({ user }) => {
   const navigate = useNavigate()
   const [reviews, setReviews] = useState()
 
   const getReviews = async () => {
-    const res = await axios.get(`${BASE_URL}/review`)
+    const res = await Client.get(`${BASE_URL}/review`)
     console.log(res)
     setReviews(res.data)
   }
