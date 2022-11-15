@@ -7,14 +7,14 @@ import Feed from './pages/Feed'
 import SignUp from './pages/SignUp'
 import RestaurantList from './pages/RestaurantList'
 import { CheckSession } from './services/Auth'
-
+import Profile from './pages/Profile'
 import { useState, useEffect } from 'react'
+
 function App() {
   const [user, setUser] = useState(null)
 
   const checkToken = async () => {
     const user = await CheckSession()
-    console.log(user)
     setUser(user)
   }
 
@@ -40,6 +40,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/restaurants" element={<RestaurantList />} />
           <Route path="/createreview" element={<CreateReview user={user} />} />
+          <Route path="/profile" element={<Profile />} />
           <Route
             path="/logout"
             element={<Logout handleLogOut={handleLogOut} setUser={setUser} />}

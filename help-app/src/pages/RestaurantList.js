@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { BASE_URL } from '../services/api'
 import Nav from '../components/Nav'

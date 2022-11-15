@@ -28,6 +28,10 @@ const Nav = () => {
           <li>
             <p onClick={() => navigate(-1)}>Back</p>
           </li>
+
+          <li>
+            <p onClick={() => navigate('/profile')}>Profile</p>
+          </li>
         </ul>
       </nav>
     </header>

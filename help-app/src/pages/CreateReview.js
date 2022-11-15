@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import axios from 'axios'
 import { BASE_URL } from '../services/api'
 import Nav from '../components/Nav'
 import { useNavigate } from 'react-router-dom'
