@@ -22,7 +22,6 @@ const Login = ({ setUser }) => {
       email: signInState.email,
       password: signInState.password
     })
-    console.log(signInState)
     const payload = await SignInUser(signInState)
     setUser(payload)
 

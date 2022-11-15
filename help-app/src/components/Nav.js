@@ -30,7 +30,7 @@ const Nav = () => {
           </li>
 
           <li>
-            <Link to="/profile">Profile</Link>
+            <p onClick={() => navigate('/profile')}>Profile</p>
           </li>
         </ul>
       </nav>
