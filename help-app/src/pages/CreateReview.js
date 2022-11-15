@@ -8,6 +8,7 @@ const CreateReview = ({ user }) => {
   let navigate = useNavigate()
   let { id } = useParams()
   const initialState = {
+    user_id: '',
     restaurant_id: '',
     dish: '',
     description: '',
@@ -17,7 +18,10 @@ const CreateReview = ({ user }) => {
   const [formState, setFormState] = useState(initialState)
 
   const handleChange = (event) => {
-    setFormState({ ...formState, [event.target.id]: event.target.value })
+    setFormState({
+      ...formState,
+      [event.target.id]: event.target.value
+    })
   }
 
   const handleSubmit = async (event) => {
@@ -37,21 +41,24 @@ const CreateReview = ({ user }) => {
     <div className="main">
       <Nav />
       <form className="form" onSubmit={handleSubmit}>
-        {/* <label htmlFor="restaurant">Restaurant:</label>
-        <select>
-          <option value="NuBurger" {formState.restaurant_id=1}>Nu Burger</option> */}
-        {/* <option value="Atlantic Fish Company">Atlantic Fish Company</option>
-          <option value="Legal Sea Foods">Legal Sea Foods</option>
-          <option value="Shaking Crab">Shaking Crab</option>
-          <option value="Union Oyster House">Union Oyster House</option>
-          <option value="The Salty Pig">The Salty Pig</option>
-          <option value="Umami Omaskse">Umami Omaskse</option>
-          <option value="Wen's Yunnan Noodle and Ramen">
-            Wens Yunnan Noodle and Ramen
-          </option>
-          <option value="Shake Shack">Shake Shack</option>
-          <option value="Krasi">Krasi</option> */}
-        {/* </select> */}
+        <label htmlFor="restaurant">Restaurant:</label>
+        <select
+          onChange={handleChange}
+          value={formState.restaurant_id}
+          id="restaurant_id"
+        >
+          <option>- Select Restaurant -</option>
+          <option value={1}>Nu Burger</option>
+          <option value={2}>Atlantic Fish Company</option>
+          <option value={3}>Legal Sea Foods</option>
+          <option value={4}>Shaking Crab</option>
+          <option value={5}>Union Oyster House</option>
+          <option value={6}>The Salty Pig</option>
+          <option value={7}>Umami Omaskse</option>
+          <option value={8}>Wen's Yunnan Noodle and Ramen</option>
+          <option value={9}>Shake Shack</option>
+          <option value={10}>Krasi</option>
+        </select>
 
         <label htmlFor="dish">Dish:</label>
         <input
