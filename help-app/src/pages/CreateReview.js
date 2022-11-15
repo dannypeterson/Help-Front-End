@@ -8,6 +8,7 @@ const CreateReview = ({ user }) => {
   let navigate = useNavigate()
   let { id } = useParams()
   const initialState = {
+    restaurant_id: '',
     dish: '',
     description: '',
     rating: '',
@@ -36,10 +37,10 @@ const CreateReview = ({ user }) => {
     <div className="main">
       <Nav />
       <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="restaurant">Restaurant:</label>
+        {/* <label htmlFor="restaurant">Restaurant:</label>
         <select>
-          <option value="NuBurger">Nu Burger</option>
-          <option value="Atlantic Fish Company">Atlantic Fish Company</option>
+          <option value="NuBurger" {formState.restaurant_id=1}>Nu Burger</option> */}
+        {/* <option value="Atlantic Fish Company">Atlantic Fish Company</option>
           <option value="Legal Sea Foods">Legal Sea Foods</option>
           <option value="Shaking Crab">Shaking Crab</option>
           <option value="Union Oyster House">Union Oyster House</option>
@@ -49,13 +50,9 @@ const CreateReview = ({ user }) => {
             Wens Yunnan Noodle and Ramen
           </option>
           <option value="Shake Shack">Shake Shack</option>
-          <option value="Krasi">Krasi</option>
-        </select>
-        {/* onChange={handleChange}
-          type="text"
-          id="restaurant"
-          value={formState.restaurant_id}
-        /> */}
+          <option value="Krasi">Krasi</option> */}
+        {/* </select> */}
+
         <label htmlFor="dish">Dish:</label>
         <input
           onChange={handleChange}
