@@ -6,6 +6,12 @@ import Nav from '../components/Nav'
 
 const Profile = () => {
   const [userReviews, setUserReviews] = useState()
+  let { id } = useParams()
+
+  const getReviews = async () => {
+    let res = await Client.get(`${BASE_URL}/review/profile/${id}`)
+    console.log(res)
+  }
 
   useEffect(() => {}, [])
 
@@ -13,6 +19,7 @@ const Profile = () => {
     <div className="main">
       <Nav />
       <h1>Profile</h1>
+      <li></li>
     </div>
   )
 }

@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { BASE_URL } from '../services/api'
 import Nav from '../components/Nav'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Client from '../services/api'
 
 const CreateReview = ({ user }) => {
   let navigate = useNavigate()
-
+  let { id } = useParams()
   const initialState = {
     dish: '',
     description: '',
@@ -24,7 +24,10 @@ const CreateReview = ({ user }) => {
     const completedReview = {
       ...formState
     }
-    let res = await Client.post(`${BASE_URL}/review/create`, completedReview)
+    let res = await Client.post(
+      `${BASE_URL}/review/create/${id}`,
+      completedReview
+    )
     setFormState(initialState)
     navigate('/feed')
   }
@@ -33,6 +36,26 @@ const CreateReview = ({ user }) => {
     <div className="main">
       <Nav />
       <form className="form" onSubmit={handleSubmit}>
+        <label htmlFor="restaurant">Restaurant:</label>
+        <select>
+          <option value="NuBurger">Nu Burger</option>
+          <option value="Atlantic Fish Company">Atlantic Fish Company</option>
+          <option value="Legal Sea Foods">Legal Sea Foods</option>
+          <option value="Shaking Crab">Shaking Crab</option>
+          <option value="Union Oyster House">Union Oyster House</option>
+          <option value="The Salty Pig">The Salty Pig</option>
+          <option value="Umami Omaskse">Umami Omaskse</option>
+          <option value="Wen's Yunnan Noodle and Ramen">
+            Wens Yunnan Noodle and Ramen
+          </option>
+          <option value="Shake Shack">Shake Shack</option>
+          <option value="Krasi">Krasi</option>
+        </select>
+        {/* onChange={handleChange}
+          type="text"
+          id="restaurant"
+          value={formState.restaurant_id}
+        /> */}
         <label htmlFor="dish">Dish:</label>
         <input
           onChange={handleChange}
