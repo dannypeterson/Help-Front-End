@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Nav from '../components/Nav'
 import { BASE_URL } from '../services/api'
@@ -11,7 +10,6 @@ const Feed = ({ user }) => {
 
   const getReviews = async () => {
     const res = await Client.get(`${BASE_URL}/review`)
-    console.log(res)
     setReviews(res.data)
   }
 
