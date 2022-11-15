@@ -1,11 +1,23 @@
-import { useState } from 'react'
-import { BASE_URL } from '../services/api'
 import Nav from '../components/Nav'
-import { useNavigate, useParams } from 'react-router-dom'
 import Client from '../services/api'
+import { BASE_URL } from '../services/api'
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
-const CreateReview = ({ user, initialState, formState, setFormState }) => {
+const UpdateReview = ({ user, formState, setFormState, initialState }) => {
   let navigate = useNavigate()
+
+  let { id } = useParams()
+
+  const getReviewById = async () => {
+    let response = await Client.get(`${BASE_URL}/review/update/${id}`)
+    console.log(response.data)
+    setFormState(response.data)
+  }
+
+  useEffect(() => {
+    getReviewById()
+  }, [])
 
   const handleChange = (event) => {
     setFormState({
@@ -19,37 +31,18 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
     const completedReview = {
       ...formState
     }
-    let res = await Client.post(
-      `${BASE_URL}/review/create/${user.id}`,
+    let res = await Client.put(
+      `${BASE_URL}/review/update/${id}`,
       completedReview
     )
     setFormState(initialState)
-    navigate('/feed')
+    navigate('/profile')
   }
 
   return (
     <div className="main">
       <Nav />
       <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="restaurant">Restaurant:</label>
-        <select
-          onChange={handleChange}
-          value={formState.restaurant_id}
-          id="restaurant_id"
-        >
-          <option>- Select Restaurant -</option>
-          <option value={1}>Nu Burger</option>
-          <option value={2}>Atlantic Fish Company</option>
-          <option value={3}>Legal Sea Foods</option>
-          <option value={4}>Shaking Crab</option>
-          <option value={5}>Union Oyster House</option>
-          <option value={6}>The Salty Pig</option>
-          <option value={7}>Umami Omaskse</option>
-          <option value={8}>Wen's Yunnan Noodle and Ramen</option>
-          <option value={9}>Shake Shack</option>
-          <option value={10}>Krasi</option>
-        </select>
-
         <label htmlFor="dish">Dish:</label>
         <input
           onChange={handleChange}
@@ -79,9 +72,10 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
           id="img"
           value={formState.img}
         />
-        <button type="submit">Post My Review!</button>
+        <button type="submit">Update Review</button>
       </form>
     </div>
   )
 }
-export default CreateReview
+
+export default UpdateReview
