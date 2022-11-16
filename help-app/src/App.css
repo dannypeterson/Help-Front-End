@@ -43,15 +43,20 @@ a:link, a:visited {
 .nav_links li {
   display: inline-block;
   padding: 0px 20px;
+  
 }
 
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
+  font-family: 'Raleway';
+  font-size: 18px;
 }
 .nav_links li p {
   transition: all 0.3s ease 0s;
   cursor: pointer;
+  font-family: 'Raleway';
+  font-size: 18px;
 }
 
 .nav_links li a:hover {
@@ -95,6 +100,7 @@ a:link, a:visited {
 .restaurant-list-background{
   background-color: #EFF4FD;
   margin-bottom: -50px;
+  margin-right: -210px;
 }
 
 .restaurant-card{
