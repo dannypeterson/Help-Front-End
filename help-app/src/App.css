@@ -185,3 +185,20 @@ background-color: white;
   background-color: #EFF4FD;
   height:100%;
 }
+
+.signup-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  margin: 25px;
+  background-color: #EFF4FD;
+  height:100%;
+
+}
+
+.signup-header{
+  font-family: 'Raleway';
+  font-size: 30px;
+  text-align:center;
+}

@@ -43,46 +43,55 @@ const SignUp = () => {
   }
 
   return (
-    <form className="signupform" onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
-      <input
-        id="username"
-        type="text"
-        placeholder="enter your username"
-        onChange={handleChange}
-        value={signUpState.username}
-      />
-      <br />
-      <label htmlFor="username">Email:</label>
-      <input
-        id="email"
-        type="text"
-        placeholder="enter your email"
-        onChange={handleChange}
-        value={signUpState.email}
-      />
-      <br />
-      <label htmlFor="username">Password:</label>
-      <input
-        id="password"
-        type="text"
-        placeholder="create your password"
-        onChange={handleChange}
-        value={signUpState.password}
-      />
-      <br />
+    <div>
+      <header className="signup-header">Welcome to Help!</header>
+      <form className="signup-form" onSubmit={handleSubmit}>
+        <label htmlFor="username">Username:</label>
+        <input
+          className="form-box"
+          id="username"
+          type="text"
+          placeholder="enter your username"
+          onChange={handleChange}
+          value={signUpState.username}
+        />
+        <br />
+        <label htmlFor="username">Email:</label>
+        <input
+          className="form-box"
+          id="email"
+          type="text"
+          placeholder="enter your email"
+          onChange={handleChange}
+          value={signUpState.email}
+        />
+        <br />
+        <label htmlFor="username">Password:</label>
+        <input
+          className="form-box"
+          id="password"
+          type="text"
+          placeholder="create your password"
+          onChange={handleChange}
+          value={signUpState.password}
+        />
+        <br />
 
-      <label htmlFor="username">Confirm password:</label>
-      <input
-        id="confirmPassword"
-        type="text"
-        placeholder="confirm your password"
-        onChange={handleChange}
-        value={signUpState.confirmPassword}
-      />
-      <br />
-      <button type="submit">Sign up!</button>
-    </form>
+        <label htmlFor="username">Confirm password:</label>
+        <input
+          className="form-box"
+          id="confirmPassword"
+          type="text"
+          placeholder="confirm your password"
+          onChange={handleChange}
+          value={signUpState.confirmPassword}
+        />
+        <br />
+        <button className="form-box" type="submit">
+          Sign up!
+        </button>
+      </form>
+    </div>
   )
 }
 
