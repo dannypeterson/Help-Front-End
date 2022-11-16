@@ -205,6 +205,7 @@ background-color: white;
   border: 1px solid #dfdfdf;
   border-radius: 15px;
   margin: 10px;
+  background-color:white;
 }
 
 .review-img-profile {
@@ -236,12 +237,14 @@ cursor: pointer;
   margin: 5px;
   font-family: 'Raleway';
   font-size: 16px;
+  cursor: pointer;
 }
 
 .main{
   background-color: #EFF4FD;
   height:100%;
 }
+
 
 .landingpage {
   display: flex;
@@ -263,4 +266,18 @@ cursor: pointer;
 
 .landingpagebuttons {
   display: flex;
+  margin: 0px;
+  background-color: #EFF4FD;
+  height:100vh;
+  padding-top:100px;
 }
+
+.signup-header{
+  font-family: 'Raleway';
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0px;
+}
+
+

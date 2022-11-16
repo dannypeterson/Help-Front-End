@@ -60,11 +60,13 @@ const UpdateReview = ({ user, formState, setFormState, initialState }) => {
           cols="30"
           rows="10"
         ></textarea>
-        <label htmlFor="rating">Rating:</label>
+        <label htmlFor="rating">Rating ( /10):</label>
         <input
           className="form-box"
           onChange={handleChange}
           type="number"
+          min="0"
+          max="10"
           id="rating"
           value={formState.rating}
         />
