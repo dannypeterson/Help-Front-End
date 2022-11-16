@@ -42,7 +42,7 @@ const Profile = ({ user }) => {
         {userReviews?.map((userReview) => (
           <div key={userReview.id} className="review-card">
             <div className="review-info">
-              <h2>{userReview.dish}</h2>
+              <h2 className="review-dish">{userReview.dish}</h2>
               <div className="location-wrapper">
                 <img
                   className="location-img"
@@ -50,28 +50,30 @@ const Profile = ({ user }) => {
                 ></img>
                 <h4 className="location">location</h4>
               </div>
-              <img
-                className="review-img-profile"
-                alt=""
-                src={userReview.img}
-              ></img>
-              <p className="description">{userReview.description}</p>
-            </div>
-            <div className="edit-buttons">
-              <button
-                className="update-button"
-                id={userReview.id}
-                onClick={() => navigate(`/update/review/${userReview.id}`)}
-              >
-                Update
-              </button>
-              <button
-                className="delete-button"
-                id={userReview.id}
-                onClick={deleteReview}
-              >
-                Delete
-              </button>
+              <div className="review-image-buttons">
+                <img
+                  className="review-img-profile"
+                  alt=""
+                  src={userReview.img}
+                ></img>
+                <p className="description">{userReview.description}</p>
+              </div>
+              <div className="edit-buttons">
+                <button
+                  className="update-button"
+                  id={userReview.id}
+                  onClick={() => navigate(`/update/review/${userReview.id}`)}
+                >
+                  Update
+                </button>
+                <button
+                  className="delete-button"
+                  id={userReview.id}
+                  onClick={deleteReview}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
         ))}
