@@ -21,6 +21,7 @@ const Profile = ({ user }) => {
 
   const deleteReview = async (e) => {
     const res = await Client.delete(`${BASE_URL}/review/delete/${e.target.id}`)
+    getReviews()
   }
 
   useEffect(() => {
