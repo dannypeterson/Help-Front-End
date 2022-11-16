@@ -44,7 +44,14 @@ const SignUp = () => {
 
   return (
     <div>
-      <header className="signup-header">Welcome to Help!</header>
+      <header className="signup-header">
+        <img
+          src="https://c4.wallpaperflare.com/wallpaper/97/171/591/food-hamburgers-minimalism-wallpaper-preview.jpg"
+          alt="logo"
+          height="200px"
+        ></img>
+        <h1>Welcome to Help!</h1>
+      </header>
       <form className="signup-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input
