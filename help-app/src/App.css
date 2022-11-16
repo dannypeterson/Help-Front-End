@@ -323,3 +323,7 @@ cursor: pointer;
   justify-content: center;
 }
 
+.back-to-login {
+  cursor: pointer;
+  margin-top: 10px;
+}
