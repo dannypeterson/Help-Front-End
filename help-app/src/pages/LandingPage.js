@@ -8,7 +8,7 @@ const LandingPage = ({ setUser }) => {
   const [login, setLogin] = useState(false)
 
   return (
-    <div>
+    <div className="landingpage">
       <h1>Welcome to Help!</h1>
       <h2>
         A Yelp-inspired social media app where users can upload an image of the
@@ -16,8 +16,9 @@ const LandingPage = ({ setUser }) => {
       </h2>
       <h3>"It's almost like Yelp and Facebook had a baby!" - Mac</h3>
       <button onClick={() => setLogin(true)}>Login</button>
-      <button onClick={() => navigate('/signup')}>Sign up</button>
       {login && <Login setUser={setUser} />}
+      <label>Don't have an account?</label>
+      <button onClick={() => navigate('/signup')}>Sign up</button>
     </div>
   )
 }
