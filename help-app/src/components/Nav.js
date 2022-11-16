@@ -5,8 +5,12 @@ const Nav = () => {
   let navigate = useNavigate()
 
   return (
-    <header>
-      <img src="" className="logo" alt="logo"></img>
+    <header className="nav">
+      <img
+        src="https://c4.wallpaperflare.com/wallpaper/97/171/591/food-hamburgers-minimalism-wallpaper-preview.jpg"
+        className="logo"
+        alt="logo"
+      ></img>
       <nav>
         <ul className="nav_links">
           <li>

@@ -17,14 +17,20 @@ const RestaurantList = () => {
   }, [])
 
   return (
-    <div className="main">
+    <div className="restaurant-list">
       <Nav />
       {restaurants.map((restaurant) => (
         <div key={restaurant.id}>
-          <img src={restaurant.img} alt={restaurant.name} />
-          <h2>{restaurant.name}</h2>
-          <h3>{restaurant.address}</h3>
-          <h3>{restaurant.category}</h3>
+          <div className="restaurant-card">
+            <img
+              className="restaurant-list-image"
+              src={restaurant.img}
+              alt={restaurant.name}
+            />
+            <h2>{restaurant.name}</h2>
+            <h3>{restaurant.address}</h3>
+            <h3>{restaurant.category}</h3>
+          </div>
         </div>
       ))}
     </div>
