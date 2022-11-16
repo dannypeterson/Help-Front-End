@@ -24,7 +24,7 @@ const Feed = ({ user }) => {
       <div className="reviews">
         {reviews?.map((review) => (
           <div key={review.id}>
-            <h3>{review.user_id}</h3>
+            <h3>@{review.reviewer.username}</h3>
             <h2>{review.dish}</h2>
             <h3>from {review.restaurant_id}</h3>
             <img src={review.img} alt=""></img>
