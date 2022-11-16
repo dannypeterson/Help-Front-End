@@ -242,3 +242,24 @@ cursor: pointer;
   background-color: #EFF4FD;
   height:100%;
 }
+
+.landingpage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px 1px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #FDC500;
+}
+
+.signinform {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  padding: 5px;
+}
+
+.landingpagebuttons {
+  display: flex;
+}
