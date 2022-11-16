@@ -77,7 +77,7 @@ const SignUp = () => {
         <input
           className="form-box"
           id="password"
-          type="text"
+          type="password"
           placeholder="create your password"
           onChange={handleChange}
           value={signUpState.password}
@@ -88,7 +88,7 @@ const SignUp = () => {
         <input
           className="form-box"
           id="confirmPassword"
-          type="text"
+          type="password"
           placeholder="confirm your password"
           onChange={handleChange}
           value={signUpState.confirmPassword}
