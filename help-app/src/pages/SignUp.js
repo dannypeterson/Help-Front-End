@@ -58,7 +58,7 @@ const SignUp = () => {
           className="form-box"
           id="username"
           type="text"
-          placeholder="enter your username"
+          placeholder="username"
           onChange={handleChange}
           value={signUpState.username}
         />
@@ -68,7 +68,7 @@ const SignUp = () => {
           className="form-box"
           id="email"
           type="text"
-          placeholder="enter your email"
+          placeholder="email"
           onChange={handleChange}
           value={signUpState.email}
         />
@@ -78,7 +78,7 @@ const SignUp = () => {
           className="form-box"
           id="password"
           type="password"
-          placeholder="create your password"
+          placeholder="password"
           onChange={handleChange}
           value={signUpState.password}
         />
@@ -89,7 +89,7 @@ const SignUp = () => {
           className="form-box"
           id="confirmPassword"
           type="password"
-          placeholder="confirm your password"
+          placeholder="confirm password"
           onChange={handleChange}
           value={signUpState.confirmPassword}
         />
