@@ -78,14 +78,15 @@ a:link, a:visited {
   margin-bottom: 45px;
 }
 
-.signupform {
+.signup-form {
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  margin: 35px;
+  align-items: center;
   padding: 5px;
+  background-color: #EFF4FD;
+  height:100vh;
 }
 
 .restaurant-list{
