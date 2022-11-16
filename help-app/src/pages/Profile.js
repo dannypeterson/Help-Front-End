@@ -10,10 +10,13 @@ const Profile = ({ user }) => {
   let navigate = useNavigate()
 
   const [userReviews, setUserReviews] = useState()
+  const [profileName, setProfileName] = useState()
 
   const getReviews = async () => {
     let res = await Client.get(`${BASE_URL}/review/profile/${user.id}`)
+    console.log(res.data)
     setUserReviews(res.data.reviews)
+    setProfileName(res.data.username)
   }
 
   const deleteReview = async (e) => {
@@ -27,7 +30,7 @@ const Profile = ({ user }) => {
   return (
     <div className="main">
       <Nav />
-      <h1>Profile</h1>
+      <h1 className="profile-name">{profileName}</h1>
       {userReviews?.map((userReview) => (
         <h2 key={userReview.id}>
           {userReview.dish}

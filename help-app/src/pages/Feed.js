@@ -10,7 +10,6 @@ const Feed = ({ user }) => {
 
   const getReviews = async () => {
     const res = await Client.get(`${BASE_URL}/review`)
-    console.log(res.data)
     setReviews(res.data)
   }
 
@@ -21,15 +20,28 @@ const Feed = ({ user }) => {
   return user ? (
     <div className="main">
       <Nav />
+
       <div className="reviews">
         {reviews?.map((review) => (
-          <div key={review.id}>
-            <h3>@{review.reviewer.username}</h3>
-            <h2>{review.dish}</h2>
-            <h3>from {review.reviews.name}</h3>
-            <img src={review.img} alt=""></img>
-            <p>{review.description}</p>
-            <h3>Rating: {review.rating}/5</h3>
+          <div key={review.id} className="review-wrapper">
+            <div className="info">
+              <div className="user">
+                <h4 className="username">@{review.reviewer.username}</h4>
+                <div className="location-wrapper">
+                  <p className="location">{review.reviews.name}</p>
+                  <img
+                    className="location-img"
+                    src="../../assets/images/location.png"
+                  ></img>
+                </div>
+              </div>
+            </div>
+            <img className="review-img" src={review.img} alt=""></img>
+            <div className="review-content">
+              <h4 className="dish">{review.dish}</h4>
+              <p className="description">{review.description}</p>
+              <p className="rating">{review.rating}/10</p>
+            </div>
           </div>
         ))}
       </div>
@@ -41,4 +53,48 @@ const Feed = ({ user }) => {
     </div>
   )
 }
+
+// .reviews {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: #eff4fd;
+// }
+
+// .review-wrapper {
+// width: 500px;
+// height: auto;
+// border: 1px solid #dfdfdf;
+// border-radius: 15px;
+// margin-top: 30px;
+// background-color: white;
+// }
+
+// .info {
+//   padding-left: 10px;
+// }
+
+// .location-wrapper {
+//   display: flex;
+//   flex-direction: row;
+
+// }
+
+// .location-img {
+//   width: 20px;
+//   height: 30px;
+//   margin-left: 5px;
+//   margin-top: 5px;
+// }
+
+// .review-img {
+//   width: inherit;
+//   height: auto;
+//   border: 1px solid #dfdfdf;
+// }
+
+// .review-content {
+//   padding: 0 10px;
+// }
+
 export default Feed
