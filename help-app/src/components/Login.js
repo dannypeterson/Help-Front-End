@@ -31,7 +31,9 @@ const Login = ({ setUser }) => {
 
   return (
     <form className="signinform" onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
+      <label className="login" htmlFor="username">
+        Username:
+      </label>
       <input
         id="username"
         type="text"
