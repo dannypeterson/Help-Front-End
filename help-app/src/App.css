@@ -205,6 +205,7 @@ background-color: white;
   border: 1px solid #dfdfdf;
   border-radius: 15px;
   margin: 10px;
+  background-color:white;
 }
 
 .review-img-profile {
@@ -236,6 +237,7 @@ cursor: pointer;
   margin: 5px;
   font-family: 'Raleway';
   font-size: 16px;
+  cursor: pointer;
 }
 
 .main{
