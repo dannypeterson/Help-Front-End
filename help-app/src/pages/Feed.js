@@ -54,47 +54,4 @@ const Feed = ({ user }) => {
   )
 }
 
-// .reviews {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   background-color: #eff4fd;
-// }
-
-// .review-wrapper {
-// width: 500px;
-// height: auto;
-// border: 1px solid #dfdfdf;
-// border-radius: 15px;
-// margin-top: 30px;
-// background-color: white;
-// }
-
-// .info {
-//   padding-left: 10px;
-// }
-
-// .location-wrapper {
-//   display: flex;
-//   flex-direction: row;
-
-// }
-
-// .location-img {
-//   width: 20px;
-//   height: 30px;
-//   margin-left: 5px;
-//   margin-top: 5px;
-// }
-
-// .review-img {
-//   width: inherit;
-//   height: auto;
-//   border: 1px solid #dfdfdf;
-// }
-
-// .review-content {
-//   padding: 0 10px;
-// }
-
 export default Feed
