@@ -24,7 +24,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 10%;
-  background-color: rgb(255, 208, 0);
+  background-color: #fdca00;
 }
 
 a:link, a:visited {
@@ -32,32 +32,48 @@ a:link, a:visited {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  height: 200px;
 }
 
 .nav_links {
   list-style: none;
+  margin-right: 150px;
 }
 
 .nav_links li {
   display: inline-block;
   padding: 0px 20px;
+  
 }
+
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
+  font-family: 'Raleway';
+  font-size: 18px;
 }
 .nav_links li p {
   transition: all 0.3s ease 0s;
   cursor: pointer;
+  font-family: 'Raleway';
+  font-size: 18px;
 }
 
 .nav_links li a:hover {
-  color: #0088a9;
+  color: red;
 }
 .nav_links li p:hover {
-  color: #0088a9;
+  color: red;
+}
+
+.nav{
+  margin-left: -150px;
+  width: 100vw;
+  font-size: 40px;
+}
+
+.navbar-p{
+  margin-bottom: 45px;
 }
 
 .signupform {
@@ -68,8 +84,41 @@ a:link, a:visited {
   align-items: flex-start;
   margin: 35px;
   padding: 5px;
-  
-  
+}
 
+.restaurant-list{
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway';
+  font-size: 20px;
+  margin-left: 500px;
+}
+
+.restaurant-list-background{
+  background-color: #EFF4FD;
+  margin-bottom: -50px;
+  margin-right: -210px;
+}
+
+.restaurant-card{
+  border: 6px solid #00509D;
+  box-shadow:0 8px 14px 0 black;
+  margin: 50px;
+  background-color: #00509D;
+  text-align: center;
+  padding: 10px;
+  width: 350px;
+}
+
+.restaurant-card:hover {
+  box-shadow: 0 10px 30px 0 black;
+  color:#FDC500;
+}
+
+.restaurant-list-image{
+  height:300px;
+  width: 350px;
 }
 
