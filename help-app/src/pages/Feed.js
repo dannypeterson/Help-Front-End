@@ -26,7 +26,7 @@ const Feed = ({ user }) => {
           <div key={review.id}>
             <h3>@{review.reviewer.username}</h3>
             <h2>{review.dish}</h2>
-            <h3>from {review.restaurant_id}</h3>
+            <h3>from {review.reviews.name}</h3>
             <img src={review.img} alt=""></img>
             <p>{review.description}</p>
             <h3>Rating: {review.rating}/5</h3>
