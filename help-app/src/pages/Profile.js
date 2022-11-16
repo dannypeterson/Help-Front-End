@@ -14,7 +14,7 @@ const Profile = ({ user }) => {
 
   const getReviews = async () => {
     let res = await Client.get(`${BASE_URL}/review/profile/${user.id}`)
-    console.log(res.data.reviews)
+    console.log(res.data)
     setUserReviews(res.data.reviews)
     setProfileName(res.data.username)
   }
@@ -39,7 +39,6 @@ const Profile = ({ user }) => {
         <h1 className="profile-name">@{profileName}</h1>
       </div>
       <div className="profile-cards">
-        <h3>Reviews:</h3>
         {userReviews?.map((userReview) => (
           <div key={userReview.id} className="review-card">
             <div className="review-info">
@@ -49,8 +48,14 @@ const Profile = ({ user }) => {
                   className="location-img"
                   src="../../assets/images/location.png"
                 ></img>
-                <p className="location">location</p>
+                <h4 className="location">location</h4>
               </div>
+              <img
+                className="review-img-profile"
+                alt=""
+                src={userReview.img}
+              ></img>
+              <p className="description">{userReview.description}</p>
             </div>
             <div className="edit-buttons">
               <button
