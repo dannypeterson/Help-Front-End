@@ -33,6 +33,7 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="restaurant">Restaurant:</label>
         <select
+          className="form-box"
           onChange={handleChange}
           value={formState.restaurant_id}
           id="restaurant_id"
@@ -52,6 +53,7 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
 
         <label htmlFor="dish">Dish:</label>
         <input
+          className="form-box"
           onChange={handleChange}
           type="text"
           id="dish"
@@ -59,6 +61,7 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
         />
         <label htmlFor="description">Description:</label>
         <textarea
+          className="form-box"
           onChange={handleChange}
           value={formState.description}
           id="description"
@@ -67,19 +70,23 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
         ></textarea>
         <label htmlFor="rating">Rating:</label>
         <input
+          className="form-box"
           onChange={handleChange}
           type="number"
           id="rating"
           value={formState.rating}
         />
-        <label htmlFor="img">Post Your Image</label>
+        <label htmlFor="img">Image (url):</label>
         <input
+          className="form-box"
           onChange={handleChange}
           type="text"
           id="img"
           value={formState.img}
         />
-        <button type="submit">Post My Review!</button>
+        <button className="form-box" type="submit">
+          Post My Review!
+        </button>
       </form>
     </div>
   )

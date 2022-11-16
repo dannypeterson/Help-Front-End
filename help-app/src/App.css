@@ -165,3 +165,18 @@ background-color: white;
 .review-content {
   padding: 0 10px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  margin: 25px;
+}
+
+.form-box{
+  border-radius: 15px;
+  margin: 5px;
+  font-family: 'Raleway';
+  font-size: 16px;
+}
