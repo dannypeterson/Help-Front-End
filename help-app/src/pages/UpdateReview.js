@@ -65,6 +65,8 @@ const UpdateReview = ({ user, formState, setFormState, initialState }) => {
           className="form-box"
           onChange={handleChange}
           type="number"
+          min="0"
+          max="10"
           id="rating"
           value={formState.rating}
         />
