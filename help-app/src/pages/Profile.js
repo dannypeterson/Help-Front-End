@@ -14,7 +14,7 @@ const Profile = ({ user }) => {
 
   const getReviews = async () => {
     let res = await Client.get(`${BASE_URL}/review/profile/${user.id}`)
-    console.log(res.data)
+    console.log(res.data.reviews)
     setUserReviews(res.data.reviews)
     setProfileName(res.data.username)
   }
@@ -30,21 +30,47 @@ const Profile = ({ user }) => {
   return (
     <div className="main">
       <Nav />
-      <h1 className="profile-name">{profileName}</h1>
-      {userReviews?.map((userReview) => (
-        <h2 key={userReview.id}>
-          {userReview.dish}
-          <button
-            id={userReview.id}
-            onClick={() => navigate(`/update/review/${userReview.id}`)}
-          >
-            Update
-          </button>
-          <button id={userReview.id} onClick={deleteReview}>
-            Delete
-          </button>
-        </h2>
-      ))}
+      <div className="profile-info">
+        <img
+          className="profile-pic"
+          alt=""
+          src="../../assets/images/empty-pfp.png"
+        ></img>
+        <h1 className="profile-name">@{profileName}</h1>
+      </div>
+      <div className="profile-cards">
+        <h3>Reviews:</h3>
+        {userReviews?.map((userReview) => (
+          <div key={userReview.id} className="review-card">
+            <div className="review-info">
+              <h2>{userReview.dish}</h2>
+              <div className="location-wrapper">
+                <img
+                  className="location-img"
+                  src="../../assets/images/location.png"
+                ></img>
+                <p className="location">location</p>
+              </div>
+            </div>
+            <div className="edit-buttons">
+              <button
+                className="update-button"
+                id={userReview.id}
+                onClick={() => navigate(`/update/review/${userReview.id}`)}
+              >
+                Update
+              </button>
+              <button
+                className="delete-button"
+                id={userReview.id}
+                onClick={deleteReview}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
