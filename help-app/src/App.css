@@ -224,6 +224,12 @@ background-color: inherit;
 cursor: pointer;
 }
 
+.update-button:hover, .delete-button:hover{
+  color: #00509D;
+  border-radius: 15px;
+  box-shadow:0 4px 8px 0 #00509D;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -264,3 +270,31 @@ cursor: pointer;
   padding-left: 0px;
 }
 
+.review-image-buttons{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.edit-buttons, .location-img, .review-dish{
+  display: flex;
+  justify-content: center;
+  margin:20px;
+  font-family: 'Raleway';
+}
+
+.location{
+  display: flex;
+  justify-content: center;
+}
+
+.description{
+  margin:10px 25px;
+  text-align: center;
+}
+
+.location-wrapper{
+  display: flex;
+  justify-content: center;
+}
