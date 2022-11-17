@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const BASE_URL = 'https://help-back-end.herokuapp.com/'
+export const BASE_URL = 'https://help-back-end.herokuapp.com'
 
 const Client = axios.create({ baseURL: BASE_URL })
 
