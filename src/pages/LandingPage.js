@@ -50,6 +50,7 @@ const LandingPage = ({ setUser }) => {
           Username:
         </label>
         <input
+          required
           id="username"
           type="text"
           placeholder="enter your username"
@@ -57,8 +58,9 @@ const LandingPage = ({ setUser }) => {
           value={signInState.username}
         />
         <br />
-        <label htmlFor="username">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
+          required
           id="email"
           type="text"
           placeholder="enter your email"
@@ -66,8 +68,9 @@ const LandingPage = ({ setUser }) => {
           value={signInState.email}
         />
         <br />
-        <label htmlFor="username">Password:</label>
+        <label htmlFor="password">Password:</label>
         <input
+          required
           id="password"
           type="password"
           placeholder="create your password"

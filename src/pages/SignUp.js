@@ -55,6 +55,7 @@ const SignUp = () => {
       <form className="signup-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input
+          required
           className="form-box"
           id="username"
           type="text"
@@ -63,8 +64,9 @@ const SignUp = () => {
           value={signUpState.username}
         />
         <br />
-        <label htmlFor="username">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
+          required
           className="form-box"
           id="email"
           type="text"
@@ -73,8 +75,9 @@ const SignUp = () => {
           value={signUpState.email}
         />
         <br />
-        <label htmlFor="username">Password:</label>
+        <label htmlFor="password">Password:</label>
         <input
+          required
           className="form-box"
           id="password"
           type="password"
@@ -84,8 +87,9 @@ const SignUp = () => {
         />
         <br />
 
-        <label htmlFor="username">Confirm password:</label>
+        <label htmlFor="confirmPassword">Confirm password:</label>
         <input
+          required
           className="form-box"
           id="confirmPassword"
           type="password"
