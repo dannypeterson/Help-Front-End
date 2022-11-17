@@ -36,7 +36,7 @@ const LandingPage = ({ setUser }) => {
       <h1>Welcome to Help!</h1>
       <img
         src="https://c4.wallpaperflare.com/wallpaper/97/171/591/food-hamburgers-minimalism-wallpaper-preview.jpg"
-        className="logo"
+        className="landing-logo"
         alt="logo"
       ></img>
       <h2>
@@ -90,10 +90,7 @@ const LandingPage = ({ setUser }) => {
           Sign in!
         </button>
       </form>
-      {/* login && <Login setUser={setUser} /> */}
       <p>Don't have an account?</p>
-      <br />
-
       <button className="login-button" onClick={() => navigate('/signup')}>
         Sign up
       </button>
