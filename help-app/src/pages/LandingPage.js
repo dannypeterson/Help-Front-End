@@ -57,7 +57,7 @@ const LandingPage = ({ setUser }) => {
           value={signInState.username}
         />
         <br />
-        <label htmlFor="username">Email:</label>
+        <label htmlFor="username">*check this later*Email:</label>
         <input
           id="email"
           type="text"
