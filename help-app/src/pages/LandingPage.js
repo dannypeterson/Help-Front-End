@@ -40,10 +40,9 @@ const LandingPage = ({ setUser }) => {
         alt="logo"
       ></img>
       <h2>
-        A Yelp-inspired social media app where users can upload an image of the
-        meal they just ate and recommend it to their friends!
+        A Yelp-inspired app where users can upload an image of the meal they
+        just ate and recommend it to their friends!
       </h2>
-      <h3>"It's almost like Yelp and Facebook had a baby!" - Mac</h3>
       {/* <button onClick={() => setLogin(true)}>Login</button> */}
 
       <form className="signinform" onSubmit={handleSubmit}>
