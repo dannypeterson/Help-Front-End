@@ -19,6 +19,7 @@ const RestaurantList = () => {
   return (
     <div className="restaurant-list-background">
       <Nav />
+      <h1 className="title">Restaurants</h1>
       <div className="restaurant-list">
         {restaurants.map((restaurant) => (
           <div key={restaurant.id}>

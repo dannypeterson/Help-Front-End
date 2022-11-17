@@ -30,6 +30,7 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
   return (
     <div className="main">
       <Nav />
+      <h1 className="title">Create a review!</h1>
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="restaurant">Restaurant:</label>
         <select

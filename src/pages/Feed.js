@@ -20,7 +20,7 @@ const Feed = ({ user }) => {
   return user ? (
     <div className="main">
       <Nav />
-
+      <h1 className="title">Help!</h1>
       <div className="reviews">
         {reviews?.reverse().map((review) => (
           <div key={review.id} className="review-wrapper">

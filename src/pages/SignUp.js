@@ -11,13 +11,7 @@ const SignUp = () => {
     confirmPassword: ''
   }
 
-  // const resetPassword = {
-  //   password: '',
-  //   confirmPassword: ''
-  // }
-
   const [signUpState, setSignUpState] = useState(initialState)
-  //const [passwordState, setPasswordState] = useState(resetPassword)
 
   const handleChange = (e) => {
     setSignUpState({ ...signUpState, [e.target.id]: e.target.value })
@@ -50,8 +44,8 @@ const SignUp = () => {
           alt="logo"
           height="200px"
         ></img>
-        <h1>Welcome to Help!</h1>
       </header>
+      <h1>Welcome to Help!</h1>
       <form className="signup-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
         <input
@@ -98,7 +92,7 @@ const SignUp = () => {
           value={signUpState.confirmPassword}
         />
         <br />
-        <button className="form-box" type="submit">
+        <button className="login-button" type="submit">
           Sign up!
         </button>
         <div className="back-to-login">

@@ -18,6 +18,10 @@ const Nav = () => {
           </li>
 
           <li>
+            <Link to="/profile">My Profile</Link>
+          </li>
+
+          <li>
             <Link to="/restaurants">Restaurants</Link>
           </li>
 
@@ -32,12 +36,6 @@ const Nav = () => {
           <li>
             <p className="navbar-p" onClick={() => navigate(-1)}>
               Back
-            </p>
-          </li>
-
-          <li>
-            <p className="navbar-p" onClick={() => navigate('/profile')}>
-              Profile
             </p>
           </li>
         </ul>

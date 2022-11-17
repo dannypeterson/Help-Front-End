@@ -40,10 +40,9 @@ const LandingPage = ({ setUser }) => {
         alt="logo"
       ></img>
       <h2>
-        A Yelp-inspired app where users can upload an image of the meal they
-        just ate and recommend it to their friends!
+        A Yelp-inspired app where users can share their reviews on popular meals
+        in town!
       </h2>
-      {/* <button onClick={() => setLogin(true)}>Login</button> */}
 
       <form className="signinform" onSubmit={handleSubmit}>
         <label className="login" htmlFor="username">
@@ -51,9 +50,10 @@ const LandingPage = ({ setUser }) => {
         </label>
         <input
           required
+          className="form-box"
           id="username"
           type="text"
-          placeholder="enter your username"
+          placeholder="Username"
           onChange={handleChange}
           value={signInState.username}
         />
@@ -61,9 +61,10 @@ const LandingPage = ({ setUser }) => {
         <label htmlFor="email">Email:</label>
         <input
           required
+          className="form-box"
           id="email"
           type="text"
-          placeholder="enter your email"
+          placeholder="Email"
           onChange={handleChange}
           value={signInState.email}
         />
@@ -71,15 +72,17 @@ const LandingPage = ({ setUser }) => {
         <label htmlFor="password">Password:</label>
         <input
           required
+          className="form-box"
           id="password"
           type="password"
-          placeholder="create your password"
+          placeholder="Password"
           onChange={handleChange}
           value={signInState.password}
         />
         <br />
 
         <button
+          className="login-button"
           disabled={!signInState.email || !signInState.password}
           type="submit"
           onClick={() => setLogin(true)}
@@ -88,10 +91,12 @@ const LandingPage = ({ setUser }) => {
         </button>
       </form>
       {/* login && <Login setUser={setUser} /> */}
-      <label>Don't have an account?</label>
+      <p>Don't have an account?</p>
       <br />
 
-      <button onClick={() => navigate('/signup')}>Sign up</button>
+      <button className="login-button" onClick={() => navigate('/signup')}>
+        Sign up
+      </button>
     </div>
   )
 }
