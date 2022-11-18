@@ -11,12 +11,16 @@ const Profile = ({ user }) => {
 
   const [userReviews, setUserReviews] = useState()
   const [profileName, setProfileName] = useState()
+  const [restaurants, setRestaurants] = useState()
 
   const getReviews = async () => {
     let res = await Client.get(`${BASE_URL}/review/profile/${user.id}`)
     console.log(res.data)
     setUserReviews(res.data.reviews)
     setProfileName(res.data.username)
+    let response = await Client.get(`${BASE_URL}/restaurants`)
+    console.log(response.data)
+    setRestaurants(response.data)
   }
 
   const deleteReview = async (e) => {
@@ -41,7 +45,11 @@ const Profile = ({ user }) => {
       </div>
       <div className="profile-cards">
         {userReviews?.map((userReview) => (
-          <div key={userReview.id} className="review-card">
+          <div
+            id={userReview.restaurant_id}
+            key={userReview.id}
+            className="review-card"
+          >
             <div className="review-info">
               <h2 className="review-dish">{userReview.dish}</h2>
               <div className="location-wrapper">
@@ -49,7 +57,7 @@ const Profile = ({ user }) => {
                   className="location-img"
                   src="../../assets/images/location.png"
                 ></img>
-                <h4 className="location">location</h4>
+                <h4 className="location">{userReview.restaurant_id}</h4>
               </div>
               <div className="review-image-buttons">
                 <img

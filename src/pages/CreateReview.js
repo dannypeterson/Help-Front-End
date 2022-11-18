@@ -40,12 +40,12 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
           id="restaurant_id"
         >
           <option>- Select Restaurant -</option>
-          <option value={1}>Nu Burger</option>
-          <option value={2}>Atlantic Fish Company</option>
-          <option value={3}>Legal Sea Foods</option>
-          <option value={4}>Shaking Crab</option>
-          <option value={5}>Union Oyster House</option>
-          <option value={6}>The Salty Pig</option>
+          <option value={1}>Atlantic Fish Company</option>
+          <option value={2}>The Salty Pig</option>
+          <option value={3}>Nu Burger</option>
+          <option value={4}>Legal Sea Foods</option>
+          <option value={5}>Shaking Crab</option>
+          <option value={6}>Union Oyster House</option>
           <option value={7}>Umami Omaskse</option>
           <option value={8}>Wen's Yunnan Noodle and Ramen</option>
           <option value={9}>Shake Shack</option>

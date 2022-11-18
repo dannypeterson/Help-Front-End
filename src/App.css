@@ -276,6 +276,10 @@ input::placeholder {
   cursor: pointer;
 }
 
+.loginbutton {
+  margin-bottom: 30px;;
+}
+
 .landingpage {
   display: flex;
   flex-direction: column;
