@@ -52,13 +52,13 @@ const Profile = ({ user }) => {
           >
             <div className="review-info">
               <h2 className="review-dish">{userReview.dish}</h2>
-              <div className="location-wrapper">
+              {/* <div className="location-wrapper">
                 <img
                   className="location-img"
                   src="../../assets/images/location.png"
                 ></img>
                 <h4 className="location">{userReview.restaurant_id}</h4>
-              </div>
+              </div> */}
               <div className="review-image-buttons">
                 <img
                   className="review-img-profile"
@@ -66,6 +66,7 @@ const Profile = ({ user }) => {
                   src={userReview.img}
                 ></img>
                 <p className="description">{userReview.description}</p>
+                <p className="rating">{userReview.rating}/10</p>
               </div>
               <div className="edit-buttons">
                 <button
