@@ -66,7 +66,3 @@
 - [ ] Adapt for mobile version
 
 ---
-
-### **_Credits_**
-
-#### Google Images: [Google Images](https://images.google.com/)
