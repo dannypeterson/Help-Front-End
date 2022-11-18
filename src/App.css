@@ -276,6 +276,14 @@ input::placeholder {
   cursor: pointer;
 }
 
+.post-review {
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Raleway';
+  margin-top: 10px;
+  height: 40px;
+}
+
 .loginbutton {
   margin-bottom: 30px;;
 }

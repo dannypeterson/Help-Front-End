@@ -87,7 +87,7 @@ const CreateReview = ({ user, initialState, formState, setFormState }) => {
           id="img"
           value={formState.img}
         />
-        <button className="form-box" type="submit">
+        <button className="post-review" type="submit">
           Post My Review!
         </button>
       </form>
