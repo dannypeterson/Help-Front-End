@@ -1,10 +1,11 @@
-# Help-Back-End
+# Help-Front-End
 
 #### Date: 11/18/22
 
-[Trello](https://trello.com/b/5WUHeRMx/make-a-comic-book-title)
-[Github](https://github.com/Codetitude/Fantasy-Band)
-[Heroku](https://www.heroku.com/)
+[Trello](https://trello.com/b/CTPSGjON/help)
+[Github](https://github.com/dannypeterson/Help-Back-End)
+[Heroku](https://help-front-end.herokuapp.com/)
+[Back End ReadMe](https://github.com/skyeager/Help-Back-End)
 
 #### **_By: Maciej Parol_**
 
@@ -12,42 +13,56 @@
 
 #### **_Danny Peterson_**
 
-[Linkedin](https://www.linkedin.com/in/maciej-parol-/)
+[Linkedin](https://www.linkedin.com/in/danny-peterson-/)
 
 #### **_Sarah Yeager_**
 
-[Linkedin](https://www.linkedin.com/in/maciej-parol-/)
+[Linkedin](https://www.linkedin.com/in/sarahkyeager/)
 
 ---
 
 ##### **_Description_**
 
-###### This project is called Help! The general idea is to create a social media platform where users can write reviews on restaurant dishes and share their reviews with their friends/followers
+###### Help! is a full-stack software engineering project created as part of General Assembly's Software Engineering Immersive program. Help! is an online platform that displays a select list of local restaurants in the Boston area. Help! utilizes user authentication to allow users to create and publish reviews on popular dishes from these restaurants.
 
 ---
 
 ##### **_Technologies_**
 
-- Express.js
+- Express
 - Node
-- Postresql
-- JWT
+- PostreSQL
+- Sequelize
+- React
+- JWT Auth
 - Github
 
 ---
 
 ##### **_Getting Started_**
 
-###### The backend will start with downloading our dependences and making the skeleton of essential folders and files.
+###### Upon visiting Help! individuals can become users by creating and logging in to a user authenticated account. Once logged in to Help! users can write reviews on tasty dishes they've experienced from a select list of local restaurants. Users can then navigate to their profile page to see a collection of their own dish reviews. By visiting the feed page, users can see a compilation of reviews created by all users, from most recent to least recent.
 
 ---
 
-## ![Imgur](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.talkandroid.com%2Fuploads%2F2014%2F06%2Fhelp.jpg&f=1&nofb=1&ipt=48bf0a290b9077fbb752265dc8b123c32badc40d9e99b2fada34e336a7a65fab&ipo=images)
+<figcaption>Help! Restaurant List</figcaption>
 
-##![Chart](https://user-images.githubusercontent.com/95553482/200982376-78cbe373-cdac-441c-a9e5-2c5e88d33e68.jpg)
+## ![Restaurant List](https://user-images.githubusercontent.com/95553482/202740132-3ec9be0c-c0e3-4e7e-8364-7c1045954603.png)
 
-##### **_Future Updates_**
+<figcaption>Help! Reviews Feed Page</figcaption>
+
+## ![Feed Page](https://user-images.githubusercontent.com/95553482/202740221-0a95e92d-4d0b-47e0-9537-da429f69bbe0.png)
+
+<figcaption>Help! Profile Page</figcaption>
+
+## ![Profile Page](https://user-images.githubusercontent.com/95553482/202760837-15adf2bd-d070-4497-8484-f3b52680e60f.png)
+
+#### **_Future Updates_**
 
 - [ ] Implement geo mapping
+- [ ] Create social media element (followers, etc.)
+- [ ] Create/add restaurant feature
+- [ ] Display dishes by highest to lowest rating
+- [ ] Adapt for mobile version
 
 ---
