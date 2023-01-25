@@ -15,11 +15,9 @@ const Profile = ({ user }) => {
 
   const getReviews = async () => {
     let res = await Client.get(`${BASE_URL}/review/profile/${user.id}`)
-    console.log(res.data)
     setUserReviews(res.data.reviews)
     setProfileName(res.data.username)
     let response = await Client.get(`${BASE_URL}/restaurants`)
-    console.log(response.data)
     setRestaurants(response.data)
   }
 

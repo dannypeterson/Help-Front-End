@@ -58,7 +58,9 @@ const LandingPage = ({ setUser }) => {
           value={signInState.username}
         />
         <br />
-        <label htmlFor="email">Email:</label>
+        <label className="login" htmlFor="email">
+          Email:
+        </label>
         <input
           required
           className="form-box"
@@ -69,7 +71,9 @@ const LandingPage = ({ setUser }) => {
           value={signInState.email}
         />
         <br />
-        <label htmlFor="password">Password:</label>
+        <label className="login" htmlFor="password">
+          Password:
+        </label>
         <input
           required
           className="form-box"
