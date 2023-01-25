@@ -14,8 +14,12 @@ code {
     monospace;
 }
 /* header stuff */
+.title {
+  text-align: center;
+  font-family: 'Raleway';
+}
+
 li, a {
-  font-weight: 500;
   font-size: 16px;
   color: #edf0f1;
   text-decoration: none;
@@ -25,19 +29,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 10px 10%;
   background-color: #FFCC01;
-  width: auto;
 }
 
-.nav{
-  width: inherit;
-  font-size: 40px;
-}
-.title {
-  text-align: center;
-  font-family: 'Raleway';
-}
 
 a:link, a:visited {
   text-decoration: none;
@@ -49,11 +45,10 @@ a:link, a:visited {
 
 .nav_links {
   list-style: none;
-  margin-right: 150px;
 }
 
 .nav_links li {
-  display: inline-block;
+  display: inline-block; 
   padding: 0px 20px;
 }
 
@@ -64,6 +59,7 @@ a:link, a:visited {
   font-size: 18px;
   color: black;
 }
+
 .nav_links li p {
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -79,11 +75,29 @@ a:link, a:visited {
   color: red;
 }
 
+@media (max-width: 600px) {
 
-.navbar-p{
-  margin-bottom: 45px;
+  .logo {
+    height: 150px;
+    margin-left: 40px;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.nav_links li{
+  padding: 5px 5px;
 }
 
+
+}
+
+/* restaurant list page  */
 .restaurant-list{
   display: flex;
   justify-content: center;
