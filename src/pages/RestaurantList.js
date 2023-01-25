@@ -8,7 +8,6 @@ const RestaurantList = () => {
 
   const getRestaurants = async () => {
     const res = await Client.get(`${BASE_URL}/restaurants`)
-    console.log(res)
     setRestaurants(res.data)
   }
 
