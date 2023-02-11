@@ -31,6 +31,17 @@ const LandingPage = ({ setUser }) => {
     navigate('/feed')
   }
 
+  const handleDemo = async (e) => {
+    e.preventDefault()
+    const payload = await SignInUser({
+      username: 'bostonfoodie',
+      email: 'bostonfoodie@gmail.com',
+      password: 'lobster'
+    })
+    await setUser(payload)
+    navigate('/feed')
+  }
+
   return (
     <div className="landingpage">
       <h1>Welcome to Help!</h1>
@@ -43,6 +54,12 @@ const LandingPage = ({ setUser }) => {
         A Yelp-inspired app where users can share their reviews on popular meals
         in town!
       </h2>
+
+      <form onSubmit={handleDemo}>
+        <button className="demo-button">Demo User! (Recruiters)</button>
+      </form>
+
+      <br></br>
 
       <form className="signinform" onSubmit={handleSubmit}>
         <label className="login" htmlFor="username">
@@ -91,13 +108,12 @@ const LandingPage = ({ setUser }) => {
           type="submit"
           onClick={() => setLogin(true)}
         >
-          Sign in!
+          Login!
         </button>
       </form>
-      <p>Don't have an account?</p>
-      <button className="login-button" onClick={() => navigate('/signup')}>
-        Sign up
-      </button>
+      <p className="back-to-login" onClick={() => navigate('/signup')}>
+        Don't have an account? Click here to sign up.
+      </p>
     </div>
   )
 }
